@@ -1,5 +1,10 @@
 body{
+    display: grid;
+    margin: 0px;
+    height: 100vh;
+    grid-template-columns: 1fr 20fr;
     background-color: white;
+
 }
 .dark{
     
@@ -18,14 +23,20 @@ body{
 }
 .nav-bar{
 
-
+    
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     padding: 10px;
+    width: fit-content;
+    height: 100%;
     gap: 15px;
+    margin: 0px;
+    /* position: absolute; */
+    left: 0px;
+    top: 0px;
     /* padding: 25px; */
-    border-radius: 20px;
+    border-radius: 0px 20px 20px 0px;
     z-index: 1;
     
 }
@@ -33,12 +44,14 @@ body{
     
     background-color:rgba(0, 0, 0, 0) ;
     color: white;
+    display: flex;
 flex-basis: 50px;
     width: fit-content;
     border-radius: 15px;
+    align-items: center;
+    justify-content: center;
     margin: 0px 25px 10px 25px;
     padding: 0px 10px;
-    display: flex;
     gap: 15px;
 }
 .nav-title{
@@ -56,9 +69,18 @@ flex-basis: 50px;
     height: 60px;
 }
 .search-input{
-    background-color: rgba(0, 0, 0, 0.314);
+    border: 0px none;
+    background-color: rgba(0, 0, 0, 0);
     height: 40px;
 }
+.search-input:focus{
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    /* border-radius: 20px; */
+border: 0px none white;
+
+}
+
 svg{
     padding: 10px;
 }
@@ -86,13 +108,20 @@ svg{
 }
 .button-warning{
     background-color: rgb(255, 255, 255);
+    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .container{
-    display: flex;
+
+    background-color: rgb(255, 255, 255);
+    position:relative;
+    padding:20px;
+    margin: 0px;
+    display: grid;
+
 }
 .click{
     background-color: rgb(252, 252, 43);
@@ -149,6 +178,8 @@ gap: 15px;
     border-radius: 50%;
 }
 .nav-paragraph{
+    padding: 0px;
+    /* margin: 0px; */
     width: 150px;
 }
 .foot{
@@ -158,4 +189,26 @@ gap: 15px;
 }
 .light :hover{
     background-color:  rgb(133, 13, 224);
+}
+
+.nav-paragraph > span {
+font-size: 30px;
+position: relative;
+top: 10px;
+margin: 10px;
+
+}
+.toggle{
+    display: flex;
+    flex-basis: 50px;
+        width: fit-content;
+        border-radius: 15px;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+}
+.footer{
+    
+
+
 }
